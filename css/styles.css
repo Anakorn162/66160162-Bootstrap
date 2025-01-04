@@ -4,199 +4,317 @@ body {
     font-family: "Kanit", sans-serif;
     font-weight: 500;
     font-style: normal;
-    }
-    /* index.html */
-    .nav-list {
-    background-color: rgb(50, 149, 207);
+}
+
+/* Header */
+header {
+    background-color: #2a9df4; /* สีฟ้าเข้มแบบน้ำทะเล */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar-logo {
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+header .nav-item a {
+    font-size: 1.2rem;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #2a9df4; /* สีฟ้าเข้มแบบน้ำทะเล */
+    border-radius: 5px;
+}
+
+/* เมนูนำทาง */
+.nav-list {
+    background-color: #2a9df4;
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 20px 0px 20px 0px;
-    }
-    .nav-list a {
+    padding: 20px 0;
+}
+
+.nav-list a {
     font-size: 1.2rem;
     text-decoration: none;
-    color: #ffffff;
+    color: #ffffff; /* สีตัวอักษร */
     padding: 2rem;
-    }
-    .nav-list a:hover{
-    color: #000000;
-    }
-    .nav-list a[aria-current="page"] {
+    background-color: #2a9df4; /* สีฟ้าของน้ำทะเล */
+    border-radius: 5px;
+}
+
+/* สีของปุ่มที่ active */
+.nav-list a.active {
+    background-color: #00f7ff; /* สีฟ้าสดใสสำหรับปุ่มที่ active */
+    color: #ffffff;
+}
+
+/* เอา hover ออกไป */
+.nav-list a:hover {
+    background-color: #2a9df4; /* สีฟ้าน้ำทะเลคงเดิม */
+    color: #ffffff; /* สีตัวอักษรคงเดิม */
+}
+
+.nav-list a[aria-current="page"] {
     font-weight: bold;
     color: #ffffff;
-    }
-    .container{
+}
+
+/* Grid และคอนเทนต์ */
+.container {
     width: 960px;
     padding-left: 3rem;
     padding-right: 3rem;
     margin-left: auto;
     margin-right: auto;
-    }
-    .grid-hl{
+}
+
+.grid-hl {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
-    }
-    .col{
+}
+
+.col {
     display: flex;
     width: 100%;
     height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    }
-    .col-img{
+}
+
+.col-img {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    }
-    .logo{
+}
+
+.logo {
     display: flex;
     justify-content: center;
-    }
-    .logo img{
+}
+
+.logo img {
     width: 150px;
     height: auto;
     padding-top: 10px;
-    }
-    .text-center{
+}
+
+.text-center {
     display: flex;
     justify-content: center;
-    }
-    footer {
-    background: rgb(50, 149, 207);
-    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: #2a9df4; /* สีฟ้าของน้ำทะเล */
+    color: #ffffff;
     text-align: center;
     padding-left: 3rem;
     padding-right: 3rem;
     margin-left: auto;
     margin-right: auto;
     bottom: 0;
-    }
-    .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    }
-    .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #000000;
-    transition: all 0.3s ease;
-    }
-    @media screen and (max-width:800px) {
-    .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    }
-    .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    }
-    .nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: orange;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    z-index: 1;
-    }
-    .nav-list.active {
-    display: flex;
-    }
-    }
-    /* info.html */
-    .grid-info {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    align-items: center;
-    padding-top: 10px;
-    }
-    .grid-info img {
-    max-width: 300px;
-    border-radius: 10px;
-    }
-    .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-    }
-    .line-left,
-    .line-right {
-    flex: 1;
-    border: 0;
-    border-top: 2px solid #e7a24e;
-    margin: 0 10px;
-    }
-    /* contact.html */
-    form {
+}
+
+/* ฟอร์ม */
+form {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .form-group {
+}
+
+.form-group {
     margin-bottom: 1.5rem;
-    }
-    label {
+}
+
+label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    }
-    input, textarea, button {
+}
+
+input, textarea, button {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box;
-    }
-    input:focus, textarea:focus {
+}
+
+input:focus, textarea:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    }
-    textarea {
+}
+
+textarea {
     resize: none;
-    }
-    button {
-    background-color: #007bff;
+}
+
+button {
+    background-color: #2a9df4; /* สีฟ้าเข้ม */
     color: #ffffff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    }
-    button:hover {
-    background-color: #0056b3;
-    }
-    small {
+}
+
+button:hover {
+    background-color: #ff9f00; /* สีส้มเมื่อ hover */
+}
+
+small {
     display: block;
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: #666666;
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.navbar-logo {
+    width: 400px;
+    height: auto;
+}
+
+/* สำหรับมือถือ */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:800px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-        .carousel-item img {
-            height: 70vh;
-            object-fit: cover;
-        }
-        
-        .carousel-caption {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .navbar-logo {
-            width: 40px;
-            height: auto;
-        }
-        
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2a9df4;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
+/* Footer Styling */
+footer {
+    background-color: #2a9df4; /* สีพื้นหลังของ footer */
+    color: #ffffff;
+    padding: 3rem 0;
+}
+
+.footer .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Grid system for footer */
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ข้อมูลติดต่อ */
+.contact-info h4,
+.social-media h4,
+.important-links h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Social media links */
+.social-media ul,
+.important-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.social-media ul li,
+.important-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-media a,
+.important-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover,
+.important-links a:hover {
+    color: #ff9f00; /* สีส้มเมื่อ hover */
+}
+
+/* ทำให้ responsive เมื่อหน้าจอเล็กลง */
+@media screen and (max-width: 768px) {
+    .grid-footer {
+        grid-template-columns: 1fr; /* แสดงเป็นคอลัมน์เดียวเมื่อหน้าจอเล็ก */
+    }
+}
